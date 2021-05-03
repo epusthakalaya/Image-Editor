@@ -1,4 +1,4 @@
-# Image Editor
+# SL Image Editor
 
 <p align="center">
   <a href="https://www.python.org">
