@@ -59,7 +59,7 @@ async def mix(client, message):
             a = await client.download_media(
                 message=message.reply_to_message, file_name=download_location
             )
-            await msg.edit("Processing Image...")
+            await msg.edit("Processing Image...📷")
             image = Image.open(a)
             red, green, blue = image.split()
             new_image = Image.merge("RGB", (green, red, blue))
@@ -104,7 +104,7 @@ async def black_white(client, message):
             image_file = cv2.imread(a)
             grayImage = cv2.cvtColor(image_file, cv2.COLOR_BGR2GRAY)
             cv2.imwrite(edit_img_loc, grayImage)
-            await message.reply_chat_action("upload_photo")
+            await message.reply_chat_action("upload_photo 📤")
             await message.reply_to_message.reply_photo(edit_img_loc, quote=True)
             await msg.delete()
         else:
